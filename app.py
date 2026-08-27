@@ -20,7 +20,7 @@ SCOPES = [
 ]
 
 # TODO: Reemplaza con tu Spreadsheet ID real
-SPREADSHEET_ID = 'TU_SPREADSHEET_ID_AQUI' 
+SPREADSHEET_ID = '1-sS10Hzsp7RNus06NAy805qcYPgtdEgKb-GgKjO5YAk' 
 RANGE_NAME = 'Hoja 1!A2:E' 
 
 @st.cache_resource
