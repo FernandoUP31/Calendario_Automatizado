@@ -168,7 +168,60 @@ calendar_options = {
         "right": "dayGridMonth,timeGridWeek,timeGridDay",
     },
     "initialView": "dayGridMonth",
+    "eventColor": "#FF4B72",
+    "eventTextColor": "#FFFFFF",
+    "eventDisplay": "block",
 }
+
+# CSS Inyectado para armonizar botones y detalles del calendario
+st.markdown("""
+<style>
+    /* Estilo para las pastillas de los eventos en la cuadrícula */
+    .fc-event {
+        border-radius: 4px;
+        border: none !important;
+        padding: 2px 4px;
+        font-weight: 500;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    /* Título del calendario en color rosa */
+    .fc-toolbar-title {
+        color: #FF4B72 !important;
+        font-weight: 700 !important;
+    }
+    
+    /* Botones de navegación (hoy, mes, semana, día) en rosa */
+    .fc .fc-button-primary {
+        background-color: #FF4B72 !important;
+        border-color: #FF4B72 !important;
+        color: #FFFFFF !important;
+        border-radius: 6px !important;
+    }
+    
+    .fc .fc-button-primary:hover {
+        background-color: #E03E61 !important;
+        border-color: #E03E61 !important;
+    }
+    
+    /* Botón activo */
+    .fc .fc-button-primary:not(:disabled).fc-button-active, 
+    .fc .fc-button-primary:not(:disabled):active {
+        background-color: #C22748 !important;
+        border-color: #C22748 !important;
+    }
+    
+    /* Estilo para los días de la semana */
+    .fc-col-header-cell-cushion {
+        color: #555555 !important;
+    }
+    
+    /* Números de los días en la vista mensual */
+    .fc-daygrid-day-number {
+        color: #555555 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 st.markdown("---")
 st.subheader("Vista de Eventos")
