@@ -6,8 +6,7 @@ token.json
 *.json
 
 # Secretos locales de Streamlit
-.streamlit/
-secrets.toml
+.streamlit/secrets.toml
 
 # Entornos virtuales y variables de entorno
 venv/
